@@ -5,6 +5,7 @@ autoprefixer = require("autoprefixer"),
 cssimport = require("postcss-import"),
 postcss = require("gulp-postcss"),
 nested = require("postcss-nested"),
+cssvars = require("postcss-simple-vars"),
 webpack = require("webpack");
 
 gulp.task("watch", function () {
@@ -38,7 +39,7 @@ function cssInject() {
 function styles() {
     console.log("nice");
     return gulp.src("./app/assets/styles/styles.css")
-        .pipe(postcss([cssimport, nested, autoprefixer]))
+        .pipe(postcss([cssimport, nested, cssvars, autoprefixer]))
         .on("error", function (errorinfo) {
             console.log(errorinfo.toString());
             this.emit("end");

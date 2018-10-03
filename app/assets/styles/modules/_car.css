@@ -5,39 +5,54 @@
     margin-right: auto;
 
     &__top {
-        height: 33%;
+        height: 35%;
         width: 55%;
         margin-left: auto;
         margin-right: auto;
         display: flex;
+        position: relative;
+        left: -3%;
 
         &__window {
             width: 50%;
-            background-color: #d0ecfd;
+            background-color: $windowBlue;
+            border-top: 10px solid $mainYellow;
         }
 
         &__window--left {
-            border-top: 10px solid red;
-            border-left: 10px solid red;
+            border-left: 10px solid $mainYellow;
             border-right: 2px solid black;
             border-top-left-radius: 60% 100%;
         }
 
         &__window--right {
-            border-top: 10px solid red;
-            border-right: 10px solid red;
+            border-right: 10px solid $mainYellow;
             border-top-right-radius: 40% 100%;
         }
     }
 
 
     &__body {
-        height: 33%;
-        background-color: red;
+        height: 45%;
+        background-color: $mainYellow;
     }
 
     &__bottom {
-        height: 33%;
-        background-color: red;
+        height: 20%;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-around;
+
+
+        &__wheel {
+            background-color: $lightGray;
+            border: 30px solid $darkGray;
+            width: 10%;
+            padding-top: 10%;
+            border-radius: 50%;
+            box-sizing: content-box;
+            position: relative;
+            top: -120%;
+        }
     }
 }

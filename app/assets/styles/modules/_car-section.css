@@ -1,5 +1,5 @@
 .car-section {
-    background-color: #87cefa;
+    background-color: $skyBlue;
     height: 65vh;
     display: flex;
     align-items: center;
