@@ -358,8 +358,8 @@ template {
 }
 
 .car {
-    width: 60%;
-    height: 55%;
+    width: 55%;
+    height: 70%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -371,29 +371,36 @@ template {
         margin-right: auto;
         display: flex;
         position: relative;
-        left: -3%;
+        left: -4%;
     }
 
 .car__top__window {
-            width: 50%;
-            background-color: #d0ecfd;
+            background-color: rgb(208, 236, 253, 0.8);
+
             border-top: 10px solid #faed87;
         }
 
 .car__top__window--left {
+            width: 45%;
             border-left: 10px solid #faed87;
-            border-right: 2px solid black;
+            border-right: 20px solid #faed87;
             border-top-left-radius: 60% 100%;
         }
 
 .car__top__window--right {
+            width: 55%;
             border-right: 10px solid #faed87;
-            border-top-right-radius: 40% 100%;
+            border-top-right-radius: 60% 100%;
         }
 
 .car__body {
         height: 45%;
         background-color: #faed87;
+        border-top-left-radius: 18% 80%;
+        border-top-right-radius: 15% 60%;
+        border-bottom-left-radius: 10% 25%;
+        border-bottom-right-radius: 15%;
+        box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 1);
     }
 
 .car__bottom {
@@ -411,5 +418,6 @@ template {
             border-radius: 50%;
             box-sizing: content-box;
             position: relative;
-            top: -120%;
+            top: -115%;
+            box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 1);
         }

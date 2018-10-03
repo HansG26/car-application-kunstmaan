@@ -1,6 +1,6 @@
 .car {
-    width: 60%;
-    height: 55%;
+    width: 55%;
+    height: 70%;
     margin-left: auto;
     margin-right: auto;
 
@@ -11,23 +11,25 @@
         margin-right: auto;
         display: flex;
         position: relative;
-        left: -3%;
+        left: -4%;
 
         &__window {
-            width: 50%;
             background-color: $windowBlue;
+
             border-top: 10px solid $mainYellow;
         }
 
         &__window--left {
+            width: 45%;
             border-left: 10px solid $mainYellow;
-            border-right: 2px solid black;
+            border-right: 20px solid $mainYellow;
             border-top-left-radius: 60% 100%;
         }
 
         &__window--right {
+            width: 55%;
             border-right: 10px solid $mainYellow;
-            border-top-right-radius: 40% 100%;
+            border-top-right-radius: 60% 100%;
         }
     }
 
@@ -35,6 +37,11 @@
     &__body {
         height: 45%;
         background-color: $mainYellow;
+        border-top-left-radius: 18% 80%;
+        border-top-right-radius: 15% 60%;
+        border-bottom-left-radius: 10% 25%;
+        border-bottom-right-radius: 15%;
+        box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 1);
     }
 
     &__bottom {
@@ -52,7 +59,8 @@
             border-radius: 50%;
             box-sizing: content-box;
             position: relative;
-            top: -120%;
+            top: -115%;
+            box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 1);
         }
     }
 }
