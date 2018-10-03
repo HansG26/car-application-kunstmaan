@@ -3,7 +3,8 @@ watch = require("gulp-watch"),
 browserSync = require("browser-sync").create()
 autoprefixer = require("autoprefixer"),
 cssimport = require("postcss-import"),
-postcss = require("gulp-postcss")
+postcss = require("gulp-postcss"),
+nested = require("postcss-nested"),
 webpack = require("webpack");
 
 gulp.task("watch", function () {
@@ -37,7 +38,7 @@ function cssInject() {
 function styles() {
     console.log("nice");
     return gulp.src("./app/assets/styles/styles.css")
-        .pipe(postcss([cssimport, autoprefixer]))
+        .pipe(postcss([cssimport, nested, autoprefixer]))
         .on("error", function (errorinfo) {
             console.log(errorinfo.toString());
             this.emit("end");

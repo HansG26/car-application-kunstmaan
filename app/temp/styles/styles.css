@@ -358,9 +358,44 @@ template {
 }
 
 .car {
-    background-color: #faed87;
     width: 60%;
     height: 55%;
     margin-left: auto;
     margin-right: auto;
 }
+
+.car__top {
+        height: 33%;
+        width: 55%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+
+.car__top__window {
+            width: 50%;
+            background-color: #d0ecfd;
+        }
+
+.car__top__window--left {
+            border-top: 10px solid red;
+            border-left: 10px solid red;
+            border-right: 2px solid black;
+            border-top-left-radius: 60% 100%;
+        }
+
+.car__top__window--right {
+            border-top: 10px solid red;
+            border-right: 10px solid red;
+            border-top-right-radius: 40% 100%;
+        }
+
+.car__body {
+        height: 33%;
+        background-color: red;
+    }
+
+.car__bottom {
+        height: 33%;
+        background-color: red;
+    }

@@ -1,7 +1,43 @@
 .car {
-    background-color: #faed87;
     width: 60%;
     height: 55%;
     margin-left: auto;
     margin-right: auto;
+
+    &__top {
+        height: 33%;
+        width: 55%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+
+        &__window {
+            width: 50%;
+            background-color: #d0ecfd;
+        }
+
+        &__window--left {
+            border-top: 10px solid red;
+            border-left: 10px solid red;
+            border-right: 2px solid black;
+            border-top-left-radius: 60% 100%;
+        }
+
+        &__window--right {
+            border-top: 10px solid red;
+            border-right: 10px solid red;
+            border-top-right-radius: 40% 100%;
+        }
+    }
+
+
+    &__body {
+        height: 33%;
+        background-color: red;
+    }
+
+    &__bottom {
+        height: 33%;
+        background-color: red;
+    }
 }
