@@ -348,9 +348,19 @@ template {
 .car-section {
     background-color: #87cefa;
     height: 65vh;
+    display: flex;
+    align-items: center;
 }
 
 .mod-section {
     background-color: #f5b791;
     height: 35vh;
+}
+
+.car {
+    background-color: #faed87;
+    width: 60%;
+    height: 55%;
+    margin-left: auto;
+    margin-right: auto;
 }
