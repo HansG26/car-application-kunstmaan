@@ -33,8 +33,8 @@
             <form action="#" method="GET">
 
                 <div>
-                    <label for="make-car">Make car</label>
                     <select name="make-car" id="make-car">
+                        <option selected disabled>Select make</option>
                         <option value="yellow">Audi</option>
                         <option value="blue">BMW</option>
                         <option value="green">Volkswagen</option>
@@ -42,8 +42,8 @@
                 </div>
 
                 <div>
-                    <label for="color-car">Color car</label>
                     <select name="color-car" id="color-car">
+                        <option selected disabled>Select color car</option>
                         <option value="yellow">yellow</option>
                         <option value="blue">blue</option>
                         <option value="green">green</option>
@@ -54,7 +54,18 @@
                 </div>
 
                 <div>
-                    <h4>Color window</h4>
+                    <select name="color-rims" id="color-rims">
+                        <option selected disabled>Select color rims</option>
+                        <option value="gray">gray</option>
+                        <option value="silver">silver</option>
+                        <option value="white">white</option>
+                        <option value="black">black</option>
+                        <option value="gold">gold</option>
+                    </select>
+                </div>
+
+                <div>
+                    <h4>Select color window</h4>
                     <label for="light-color">light</label>
                     <input type="radio" id="light-color" name="color-window" value="light" checked>
 
@@ -72,21 +83,13 @@
                 </div>
 
                 <div>
-                    <label for="change-number">Change number</label>
+                    <label for="change-number">Select number</label>
                     <input type="number" id="change-number" name="number" min="0" max="99" maxlength="2">
                 </div>
 
-                <div>
-                    <label for="color-rims">Make car</label>
-                    <select name="color-rims" id="color-rims">
-                        <option value="gray">gray</option>
-                        <option value="silver">silver</option>
-                        <option value="white">white</option>
-                        <option value="black">black</option>
-                        <option value="gold">gold</option>
-                    </select>
-                </div>
+
                 
+                <input type="reset" value="Reset to default">
 
             </form>
         </section>
