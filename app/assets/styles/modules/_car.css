@@ -15,7 +15,6 @@
 
         &__window {
             background-color: $windowBlue;
-
             border-top: 10px solid $mainYellow;
         }
 
@@ -35,6 +34,8 @@
 
 
     &__body {
+        display: flex;
+        justify-content: space-between;
         height: 45%;
         background-color: $mainYellow;
         border-top-left-radius: 18% 80%;
@@ -42,6 +43,51 @@
         border-bottom-left-radius: 10% 25%;
         border-bottom-right-radius: 15%;
         box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 1);
+
+        &__rear-light {
+            display: inline-block;
+            background-color: $rearLight;
+            width: 4%;
+            height: 30%;
+            position: relative;
+            top: 60%;
+            border-top-left-radius: 40%;
+            border-bottom-left-radius: 40%;
+            box-shadow: -5px 0px 20px 10px #d35959; 
+        }
+
+        &__front-light {
+            background-color: $white;
+            width: 4%;
+            height: 30%;
+            position: relative;
+            top: 55%;
+            border-top-right-radius: 20%;
+            border-bottom-right-radius: 30%;
+            box-shadow: 5px 0px 20px 10px #eeece4f7; 
+        }
+
+        &__number {
+            position: relative;
+            display: inline-block;
+            width: 16%;
+            height: 0;
+            padding: 8% 0;
+            border-radius: 50%;
+            background-color: $white;
+            text-align: center;
+            font-size: 4em;
+            align-self: center;
+            line-height: 0;
+            font-family: 'Anton', sans-serif;
+            letter-spacing: 0.075em;
+            text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 
+            0 3px 0 #bbb, 0 4px 0 #b9b9b9, 
+            0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 
+            0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 
+            0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 
+            0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+        }
     }
 
     &__bottom {

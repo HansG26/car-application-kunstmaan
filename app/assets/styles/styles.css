@@ -1,6 +1,7 @@
 @import "normalize.css";
 @import "base/_variables.css";
 @import "base/_global.css";
+@import url('https://fonts.googleapis.com/css?family=Anton');
 @import "modules/_car-section.css";
 @import "modules/_mod-section.css";
 @import "modules/_car.css";
