@@ -203,8 +203,16 @@ select { /* 1 */
     background-color: transparent;
     border: none;
     width: 100%;
+    box-shadow: 0 8px 6px -6px black;
+}input {
+    box-shadow: 0 8px 6px -6px black;
 }input[type="number"] {
     display: block;
+    border: none;
+    background-color: #D4EDFD;
+}input[type="radio"] {
+    margin-left: 3px;
+    margin-right: 10px;
 }.car-section {
     background-color: #87cefa;
     height: 65vh;
@@ -318,8 +326,6 @@ select { /* 1 */
     }.mod-menu__radio {
         width: 80%;  
         margin-bottom: 15px;
-    }.mod-menu__number {
-        
     }.mod-menu__reset {
         margin-top: 20px;
     }.panel {

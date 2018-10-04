@@ -7,8 +7,20 @@ select {
     background-color: transparent;
     border: none;
     width: 100%;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+input {
+    box-shadow: 0 8px 6px -6px black;
 }
 
 input[type="number"] {
     display: block;
+    border: none;
+    background-color: $menuBlue;
+}
+
+input[type="radio"] {
+    margin-left: 3px;
+    margin-right: 10px;
 }
