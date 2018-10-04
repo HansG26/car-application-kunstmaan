@@ -3,6 +3,10 @@
     font-family: 'Anton', sans-serif;
 }
 
+body {
+    background-color: $mainOrange;
+}
+
 select {
     background-color: transparent;
     border: none;
@@ -15,13 +19,15 @@ input {
 }
 
 input[type="number"] {
-    display: block;
+    display: inline-block;
     border: none;
     background-color: $menuBlue;
     border-radius: 10px;
+    padding: 5px;
 }
 
 input[type="radio"] {
     margin-left: 3px;
     margin-right: 10px;
 }
+

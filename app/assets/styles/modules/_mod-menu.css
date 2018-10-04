@@ -23,19 +23,57 @@
        background-color: $menuBlue;
        border-radius: 10px;
        width: 80%;
+       margin-left: auto;
+       margin-right: auto;
+       margin-bottom: 15px;
+
+        @media (min-width: 530px) {
+            margin: 0;
+        }
     }
 
     &__radio {
         width: 80%;  
-        margin-bottom: 15px;
+        margin: 0 auto 10px auto;
+        text-align: center;
+
+        @media (min-width: 530px) {
+            margin: 0 0 15px 0;
+            text-align: left;
+        }
+    }
+
+    &__number {
+        margin: 0 auto 0 auto;
+        width: 80%;
+        text-align: center;
+
+        @media (min-width: 530px) {
+            margin: 0;
+            text-align: left;
+            width: 100%;
+        }
+        
+        
     }
 
     &__reset {
-        margin-top: 40px;
+        margin-top: 20px;
         background-color: #F5919D;
         border: none;
         padding: 10px;
+        margin-bottom: 10px;
         border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        letter-spacing: 0.1em;
+
+        @media (min-width: 530px) {
+            margin: 40px 0 0 0;
+            display: inline;
+        }
+        
     }
 
 
