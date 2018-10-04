@@ -1,8 +1,23 @@
 .car {
-    width: 45%;
+    width: 85%;
     height: 70%;
     margin-left: auto;
     margin-right: auto;
+
+    @media (min-width: 530px) {
+        width: 70%;
+        height: 55%;
+    }
+
+    @media (min-width: 820px) {
+        width: 55%;
+        height: 60%;
+    }
+
+    @media (min-width: 1120px) {
+        width: 45%;
+        height: 65%
+    }
 
     &__top {
         height: 35%;
@@ -70,9 +85,9 @@
         &__number {
             position: relative;
             display: inline-block;
-            width: 16%;
+            width: 20%;
             height: 0;
-            padding: 8% 0;
+            padding: 10% 0;
             border-radius: 50%;
             background-color: $white;
             text-align: center;
@@ -86,6 +101,21 @@
             0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 
             0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 
             0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+
+            @media (min-width: 530px) {
+                width: 19%;
+                padding: 9.5% 0;
+            }
+
+            @media (min-width: 820px) {
+                width: 18%;
+                padding: 9% 0;
+            }
+
+            @media (min-width: 1120px) {
+                width: 16%;
+                padding: 8% 0;
+            }
         }
     }
 

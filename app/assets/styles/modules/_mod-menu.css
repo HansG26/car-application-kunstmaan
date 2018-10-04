@@ -1,15 +1,27 @@
 .mod-menu {
-    width: 40%;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     padding-top: 20px;
+
+    @media (min-width: 1120px) {
+        width: 45%;
+    }
+
+    @media (min-width: 820px) {
+        width: 55%;
+    }
+
+    @media (min-width: 530px) {
+        display: flex;
+    }
 
     &__dropdown {
        font-size: 1.4em;
        background-color: $menuBlue;
-       border-radius: 10%;
+       border-radius: 10px;
        width: 80%;
     }
 
@@ -19,7 +31,11 @@
     }
 
     &__reset {
-        margin-top: 20px;
+        margin-top: 40px;
+        background-color: #F5919D;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
     }
 
 

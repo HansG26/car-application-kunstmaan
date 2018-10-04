@@ -1,4 +1,8 @@
 .mod-section {
     background-color: $mainOrange;
-    height: 35vh;
+    height: 60vh;
+
+    @media (min-width: 530px) {
+        height: 40vh;
+    }
 }
