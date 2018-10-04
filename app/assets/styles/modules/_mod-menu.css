@@ -1,0 +1,21 @@
+.mod-menu {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+
+    &__dropdown {
+       font-size: 1.4em;
+       background-color: $menuBlue;
+       border-radius: 10%;
+       width: 80%;
+    }
+
+    &__reset {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

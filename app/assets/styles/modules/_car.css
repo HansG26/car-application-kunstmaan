@@ -1,5 +1,5 @@
 .car {
-    width: 55%;
+    width: 45%;
     height: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -79,7 +79,6 @@
             font-size: 4em;
             align-self: center;
             line-height: 0;
-            font-family: 'Anton', sans-serif;
             letter-spacing: 0.075em;
             text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 
             0 3px 0 #bbb, 0 4px 0 #b9b9b9, 

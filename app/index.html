@@ -30,66 +30,70 @@
 
         <!--Section where modifications to car can be done-->
         <section class="mod-section">
-            <form action="#" method="GET">
+            <form class="mod-menu" action="#" method="GET">
+                <div class="panel">
+            
+                    <div class="mod-menu__dropdown">
+                        <select name="color-car" id="color-car">
+                            <option selected disabled>Select color car</option>
+                            <option value="yellow">yellow</option>
+                            <option value="blue">blue</option>
+                            <option value="green">green</option>
+                            <option value="red">red</option>
+                            <option value="black">black</option>
+                            <option value="white">white</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mod-menu__dropdown">
+                        <select name="color-rims" id="color-rims">
+                            <option selected disabled>Select color rims</option>
+                            <option value="gray">gray</option>
+                            <option value="silver">silver</option>
+                            <option value="white">white</option>
+                            <option value="black">black</option>
+                            <option value="gold">gold</option>
+                        </select>
+                    </div>
 
-                <div>
-                    <select name="make-car" id="make-car">
-                        <option selected disabled>Select make</option>
-                        <option value="yellow">Audi</option>
-                        <option value="blue">BMW</option>
-                        <option value="green">Volkswagen</option>
-                    </select>
+                    <div class="mod-menu__dropdown">
+                        <select name="make-car" id="make-car">
+                            <option selected disabled>Select make</option>
+                            <option value="yellow">Audi</option>
+                            <option value="blue">BMW</option>
+                            <option value="green">Volkswagen</option>
+                        </select>
+                    </div>
                 </div>
-
-                <div>
-                    <select name="color-car" id="color-car">
-                        <option selected disabled>Select color car</option>
-                        <option value="yellow">yellow</option>
-                        <option value="blue">blue</option>
-                        <option value="green">green</option>
-                        <option value="red">red</option>
-                        <option value="black">black</option>
-                        <option value="white">white</option>
-                    </select>
-                </div>
-
-                <div>
-                    <select name="color-rims" id="color-rims">
-                        <option selected disabled>Select color rims</option>
-                        <option value="gray">gray</option>
-                        <option value="silver">silver</option>
-                        <option value="white">white</option>
-                        <option value="black">black</option>
-                        <option value="gold">gold</option>
-                    </select>
-                </div>
-
-                <div>
-                    <h4>Select color window</h4>
-                    <label for="light-color">light</label>
-                    <input type="radio" id="light-color" name="color-window" value="light" checked>
-
-                    <label for="dark-color">dark</label>
-                    <input type="radio" id="dark-color" name="color-window" value="dark">
-                </div>
-
-                <div>
-                    <h4>Show number</h4>
-                    <label for="show-number">yes</label>
-                    <input type="radio" id="show-number" name="display-number" value="yes" checked>
-                
-                    <label for="hide-number">no</label>
-                    <input type="radio" id="hide-number" name="display-number" value="no">
-                </div>
-
-                <div>
-                    <label for="change-number">Select number</label>
-                    <input type="number" id="change-number" name="number" min="0" max="99" maxlength="2">
-                </div>
-
 
                 
-                <input type="reset" value="Reset to default">
+
+                <div class="panel">
+                    <div>
+                        <h4>Select color window</h4>
+                        <label for="light-color">light</label>
+                        <input type="radio" id="light-color" name="color-window" value="light" checked>
+                    
+                        <label for="dark-color">dark</label>
+                        <input type="radio" id="dark-color" name="color-window" value="dark">
+                    </div>
+                    
+                    <div>
+                        <h4>Show number</h4>
+                        <label for="show-number">yes</label>
+                        <input type="radio" id="show-number" name="display-number" value="yes" checked>
+                    
+                        <label for="hide-number">no</label>
+                        <input type="radio" id="hide-number" name="display-number" value="no">
+                    </div>
+                    
+                    <div>
+                        <label for="change-number">Select number</label>
+                        <input type="number" id="change-number" name="number" min="0" max="99" maxlength="2">
+                    </div>
+                </div>
+
+                <input class="mod-menu__reset" type="reset" value="Reset to default">
 
             </form>
         </section>
