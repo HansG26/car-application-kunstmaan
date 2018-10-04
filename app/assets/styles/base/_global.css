@@ -8,3 +8,7 @@ select {
     border: none;
     width: 100%;
 }
+
+input[type="number"] {
+    display: block;
+}

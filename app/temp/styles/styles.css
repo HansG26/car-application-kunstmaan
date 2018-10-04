@@ -203,6 +203,8 @@ select { /* 1 */
     background-color: transparent;
     border: none;
     width: 100%;
+}input[type="number"] {
+    display: block;
 }.car-section {
     background-color: #87cefa;
     height: 65vh;
@@ -305,20 +307,29 @@ select { /* 1 */
     margin-right: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     padding-top: 20px;
+
+
 }.mod-menu__dropdown {
        font-size: 1.4em;
        background-color: #D4EDFD;
        border-radius: 10%;
        width: 80%;
+    }.mod-menu__radio {
+        width: 80%;  
+        margin-bottom: 15px;
+    }.mod-menu__number {
+        
     }.mod-menu__reset {
-        margin-left: auto;
-        margin-right: auto;
+        margin-top: 20px;
     }.panel {
     width: 50%;
     flex-direction: column;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+}.title {
+    margin-bottom: 8px;
+    margin-top: 0;
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
 }
