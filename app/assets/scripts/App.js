@@ -1,3 +1,3 @@
-import MobileMenu from "./modules/MobileMenu";
+import CarMenu from "./modules/CarMenu";
 
-var mobileMenu = new MobileMenu();
+var carMenu = new CarMenu();

@@ -19,7 +19,7 @@
     }
 
     &__dropdown {
-       font-size: 1.4em;
+       font-size: 1.3em;
        background-color: $menuBlue;
        border-radius: 10px;
        width: 80%;

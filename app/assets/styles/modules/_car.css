@@ -1,8 +1,9 @@
 .car {
-    width: 85%;
+    width: 90%;
     height: 70%;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 
     @media (min-width: 530px) {
         width: 70%;
@@ -16,7 +17,21 @@
 
     @media (min-width: 1120px) {
         width: 45%;
-        height: 65%
+        height: 70%;
+    }
+
+    &__logo {
+        position: absolute;
+        width: 10%;
+        height: 10%;
+        left: 84%;
+        top: 40%;
+        overflow: hidden;
+    }
+
+    &__logo > img {
+        max-width:100%;
+        max-height:100%;
     }
 
     &__top {

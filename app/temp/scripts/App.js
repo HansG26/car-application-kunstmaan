@@ -70,13 +70,13 @@
 "use strict";
 
 
-var _MobileMenu = __webpack_require__(1);
+var _CarMenu = __webpack_require__(1);
 
-var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
+var _CarMenu2 = _interopRequireDefault(_CarMenu);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var mobileMenu = new _MobileMenu2.default();
+var carMenu = new _CarMenu2.default();
 
 /***/ }),
 /* 1 */
@@ -93,22 +93,41 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var MobileMenu = function () {
-    function MobileMenu() {
-        _classCallCheck(this, MobileMenu);
+var CarMenu = function () {
+    function CarMenu() {
+        _classCallCheck(this, CarMenu);
+
+        this.makeDropDown = document.querySelector("#make-car");
+        this.events();
     }
 
-    _createClass(MobileMenu, [{
-        key: "sayHi",
-        value: function sayHi() {
-            console.log("hi");
+    _createClass(CarMenu, [{
+        key: "events",
+        value: function events() {
+            this.makeDropDown.addEventListener("change", this.displayLogo.bind(this));
+        }
+
+        // fetch relevant logo from REST API using index inside JSON object
+
+    }, {
+        key: "displayLogo",
+        value: function displayLogo() {
+            var index = this.makeDropDown.selectedIndex - 1; // -1, want to count for index of disabled option 'select make'
+            fetch('https://car-api.firebaseio.com/rest.json').then(function (response) {
+                return response.json();
+            }).then(function (carBrands) {
+                var html = "<img src=\"" + carBrands[index].logoUrl + "\" alt=\"logo of " + carBrands[index].make + "\">";
+                document.querySelector(".car__logo").innerHTML = html;
+            }).catch(function (error) {
+                console.log(error);
+            });
         }
     }]);
 
-    return MobileMenu;
+    return CarMenu;
 }();
 
-exports.default = MobileMenu;
+exports.default = CarMenu;
 
 /***/ })
 /******/ ]);
