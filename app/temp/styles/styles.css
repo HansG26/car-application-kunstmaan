@@ -253,7 +253,7 @@ select { /* 1 */
         position: absolute;
         width: 10%;
         height: 10%;
-        left: 84%;
+        left: 85%;
         top: 40%;
         overflow: hidden;
     }.car__logo > img {
@@ -269,21 +269,23 @@ select { /* 1 */
         left: -4%;
     }.car__top__window {
             background-color: #d0ecfdcc;
-            border-top: 10px solid #faed87;
+            
         }.car__top__window--left {
             width: 45%;
-            border-left: 10px solid #faed87;
-            border-right: 20px solid #faed87;
+            border-left: 10px solid #faf087;
+            border-right: 20px solid #faf087;
+            border-top: 10px solid #faf087;
             border-top-left-radius: 60% 100%;
         }.car__top__window--right {
             width: 55%;
-            border-right: 10px solid #faed87;
+            border-right: 10px solid #faf087;
+            border-top: 10px solid #faf087;
             border-top-right-radius: 60% 100%;
         }.car__body {
         display: flex;
         justify-content: space-between;
         height: 45%;
-        background-color: #faed87;
+        background-color: #faf087;
         border-top-left-radius: 18% 80%;
         border-top-right-radius: 15% 60%;
         border-bottom-left-radius: 10% 25%;

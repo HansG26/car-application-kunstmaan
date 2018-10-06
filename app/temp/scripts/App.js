@@ -70,13 +70,18 @@
 "use strict";
 
 
-var _CarMenu = __webpack_require__(1);
+var _FetchAPI = __webpack_require__(1);
 
-var _CarMenu2 = _interopRequireDefault(_CarMenu);
+var _FetchAPI2 = _interopRequireDefault(_FetchAPI);
+
+var _CarModifications = __webpack_require__(2);
+
+var _CarModifications2 = _interopRequireDefault(_CarModifications);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var carMenu = new _CarMenu2.default();
+var fetchAPI = new _FetchAPI2.default();
+var carModifications = new _CarModifications2.default();
 
 /***/ }),
 /* 1 */
@@ -93,15 +98,15 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var CarMenu = function () {
-    function CarMenu() {
-        _classCallCheck(this, CarMenu);
+var FetchAPI = function () {
+    function FetchAPI() {
+        _classCallCheck(this, FetchAPI);
 
         this.makeDropDown = document.querySelector("#make-car");
         this.events();
     }
 
-    _createClass(CarMenu, [{
+    _createClass(FetchAPI, [{
         key: "events",
         value: function events() {
             this.makeDropDown.addEventListener("change", this.displayLogo.bind(this));
@@ -124,10 +129,75 @@ var CarMenu = function () {
         }
     }]);
 
-    return CarMenu;
+    return FetchAPI;
 }();
 
-exports.default = CarMenu;
+exports.default = FetchAPI;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var CarModifications = function () {
+    function CarModifications() {
+        _classCallCheck(this, CarModifications);
+
+        // elements for changing color car
+        this.colorCarDropDown = document.querySelector("#color-car");
+        this.carBody = document.querySelector(".car__body");
+        this.leftWindow = document.querySelector(".car__top__window--left");
+        this.rightWindow = document.querySelector(".car__top__window--right");
+
+        // elements for changing color rims
+        this.colorRimsDropDown = document.querySelector(".car__bottom__wheel");
+
+        this.events();
+    }
+
+    _createClass(CarModifications, [{
+        key: "events",
+        value: function events() {
+            this.colorCarDropDown.addEventListener("change", this.changeColorCar.bind(this));
+            this.colorRimsDropDown.addEventListener("change", this.changeColorRims.bind(this));
+        }
+
+        // to change color windowborders and body together, changeColorBody and changeColorWindowBorders
+
+    }, {
+        key: "changeColorCar",
+        value: function changeColorCar() {
+            var carColor = this.colorCarDropDown.options[this.colorCarDropDown.selectedIndex].value;
+            this.changeColorBody(carColor);
+            this.changeColorWindowBorders(carColor);
+        }
+    }, {
+        key: "changeColorBody",
+        value: function changeColorBody(carColor) {
+            this.carBody.style.backgroundColor = carColor;
+        }
+    }, {
+        key: "changeColorWindowBorders",
+        value: function changeColorWindowBorders(carColor) {
+            this.leftWindow.style.borderColor = carColor;
+            this.rightWindow.style.borderColor = carColor;
+        }
+    }]);
+
+    return CarModifications;
+}();
+
+exports.default = CarModifications;
 
 /***/ })
 /******/ ]);

@@ -1,3 +1,5 @@
-import CarMenu from "./modules/CarMenu";
+import FetchAPI from "./modules/FetchAPI";
+import CarModifications from "./modules/CarModifications"
 
-var carMenu = new CarMenu();
+var fetchAPI = new FetchAPI();
+var carModifications = new CarModifications();

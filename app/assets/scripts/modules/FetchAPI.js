@@ -1,4 +1,4 @@
-class CarMenu {
+class FetchAPI {
     constructor() {
         this.makeDropDown = document.querySelector("#make-car");
         this.events();
@@ -27,5 +27,5 @@ class CarMenu {
 
 }
 
-export default CarMenu;
+export default FetchAPI;
 

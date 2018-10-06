@@ -24,7 +24,7 @@
         position: absolute;
         width: 10%;
         height: 10%;
-        left: 84%;
+        left: 85%;
         top: 40%;
         overflow: hidden;
     }
@@ -45,19 +45,21 @@
 
         &__window {
             background-color: $windowBlue;
-            border-top: 10px solid $mainYellow;
+            
         }
 
         &__window--left {
             width: 45%;
             border-left: 10px solid $mainYellow;
             border-right: 20px solid $mainYellow;
+            border-top: 10px solid $mainYellow;
             border-top-left-radius: 60% 100%;
         }
 
         &__window--right {
             width: 55%;
             border-right: 10px solid $mainYellow;
+            border-top: 10px solid $mainYellow;
             border-top-right-radius: 60% 100%;
         }
     }
