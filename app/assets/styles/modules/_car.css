@@ -27,6 +27,11 @@
         left: 85%;
         top: 40%;
         overflow: hidden;
+        opacity: 1;
+    }
+
+    &__logo--invisible {
+        opacity: 0;
     }
 
     &__logo > img {
@@ -42,10 +47,11 @@
         display: flex;
         position: relative;
         left: -4%;
+        
 
         &__window {
             background-color: $windowBlue;
-            
+            transition: all 0.3s ease-out;
         }
 
         &__window--left {
@@ -75,6 +81,7 @@
         border-bottom-left-radius: 10% 25%;
         border-bottom-right-radius: 15%;
         box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 1);
+        transition: all 0.3s ease-out;
 
         &__rear-light {
             display: inline-block;
@@ -100,6 +107,7 @@
         }
 
         &__number {
+            transition: all 0.3s ease-out;
             position: relative;
             display: inline-block;
             width: 20%;
@@ -133,6 +141,11 @@
                 width: 16%;
                 padding: 8% 0;
             }
+        }
+
+        &__number--invisible {
+            opacity: 0;
+            
         }
     }
 
