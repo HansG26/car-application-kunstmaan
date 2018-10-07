@@ -21,10 +21,9 @@ gulp.task("watch", function () {
         browserSync.reload();
     });
 
-    watch("./app/assets/styles/**/*.css", function () {
-        styles();
-        cssInject();
-    });
+    watch("./app/assets/styles/**/*.css", gulp.series('cssInject', function(done) {
+        done();
+    }));
 
     watch("./app/assets/scripts/**/*.js", function() {
         scripts();
@@ -32,21 +31,9 @@ gulp.task("watch", function () {
     });
 });
 
-function cssInject() {
+gulp.task('cssInject', gulp.series('styles', function() {
     return gulp.src("./app/assets/styles/styles.css").pipe(browserSync.stream());
-}
-
-function styles() {
-    console.log("nice");
-    return gulp.src("./app/assets/styles/styles.css")
-        .pipe(postcss([cssimport, nested, cssvars, autoprefixer]))
-        .on("error", function (errorinfo) {
-            console.log(errorinfo.toString());
-            this.emit("end");
-        })
-        .pipe(gulp.dest("./app/temp/styles"));
-}
-    
+}));
 
 function scripts() {
     webpack(require("../../webpack.config.js"), function (err, stats) {
