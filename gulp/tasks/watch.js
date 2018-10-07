@@ -25,25 +25,17 @@ gulp.task("watch", function () {
         done();
     }));
 
-    watch("./app/assets/scripts/**/*.js", function() {
-        scripts();
-        scriptsRefresh();
-    });
+    watch("./app/assets/scripts/**/*.js", gulp.series('scriptsRefresh', function() {
+    }));
 });
 
 gulp.task('cssInject', gulp.series('styles', function() {
     return gulp.src("./app/assets/styles/styles.css").pipe(browserSync.stream());
 }));
 
-function scripts() {
-    webpack(require("../../webpack.config.js"), function (err, stats) {
-        if (err) {
-            console.log(err.toString());
-        }
-        console.log(stats.toString());
-    });
-}
-
-function scriptsRefresh() {
+gulp.task('scriptsRefresh', gulp.series('scripts', function(done) {
     browserSync.reload();
-}
+    done();
+}));
+
+

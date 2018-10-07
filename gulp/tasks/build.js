@@ -34,7 +34,7 @@ gulp.task('copyGeneralFiles', gulp.series('deleteDistFolder', function() {
         .pipe(gulp.dest('./dist'));
 }));
 
-gulp.task('usemin', gulp.series('deleteDistFolder', function() {
+gulp.task('usemin', gulp.series('deleteDistFolder', 'styles', 'scripts', function() {
     return gulp.src('./app/index.html')
     .pipe(usemin({
         css: [function() {return rev()}, function() {return cssnano()}],
