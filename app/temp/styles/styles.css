@@ -438,13 +438,16 @@ select { /* 1 */
         margin-right: auto;
         display: block;
         letter-spacing: 0.1em;
+        cursor: pointer;
         
     }@media (min-width: 530px) {.mod-menu__reset {
             margin: 40px 0 0 0;
             display: inline
         
     }
-        }.panel {
+        }.mod-menu__reset:focus {
+        outline: 0;
+    }.panel {
     
     margin-left: auto;
     margin-right: auto;

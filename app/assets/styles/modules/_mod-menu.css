@@ -68,12 +68,17 @@
         margin-right: auto;
         display: block;
         letter-spacing: 0.1em;
+        cursor: pointer;
 
         @media (min-width: 530px) {
             margin: 40px 0 0 0;
             display: inline;
         }
         
+    }
+
+    &__reset:focus {
+        outline: 0;
     }
 
 
