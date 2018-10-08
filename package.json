@@ -2,7 +2,9 @@
   "name": "car-application-kunstmaan",
   "version": "1.0.0",
   "dependencies": {
-    "normalize.css": "^8.0.0"
+    "normalize.css": "^8.0.0",
+    "promise-polyfill": "8.1.0",
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.1.5",
