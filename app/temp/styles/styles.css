@@ -273,7 +273,7 @@ select { /* 1 */
         position: relative;
         left: -4%;
     }.car__top__window {
-            background-color: #d0ecfdcc;
+            background-color: #bbdff5;
             transition: all 0.3s ease-out;
         }.car__top__window--left {
             width: 45%;

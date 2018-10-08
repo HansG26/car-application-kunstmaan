@@ -61,11 +61,11 @@ class CarModifications {
 
     changeColorWindowGlass() {
         if(this.lightColorWindowsRadioButton.checked) {
-            this.leftWindow.style.backgroundColor = "#d0ecfdcc";
-            this.rightWindow.style.backgroundColor = "#d0ecfdcc";
+            this.leftWindow.style.backgroundColor = "#bbdff5";
+            this.rightWindow.style.backgroundColor = "#bbdff5";
         } else if (this.darkColorWindowsRadioButton.checked) {
-            this.leftWindow.style.backgroundColor = "#071524cc";
-            this.rightWindow.style.backgroundColor = "#071524cc";
+            this.leftWindow.style.backgroundColor = "#071524";
+            this.rightWindow.style.backgroundColor = "#071524";
         }
     }
 
@@ -99,8 +99,8 @@ class CarModifications {
         this.changeColorBody("#faed87");
         this.changeColorWindowBorders("#faed87");
         this.rims.forEach(rim => rim.style.backgroundColor = "#555");
-        this.leftWindow.style.backgroundColor = "#d0ecfdcc";
-        this.rightWindow.style.backgroundColor = "#d0ecfdcc";
+        this.leftWindow.style.backgroundColor = "#bbdff5";
+        this.rightWindow.style.backgroundColor = "#bbdff5";
         this.carNumber.classList.remove("car__body__number--invisible");
         this.carNumber.innerHTML = "12";
         this.carLogo.classList.add("car__logo--invisible");

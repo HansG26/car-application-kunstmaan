@@ -1,3 +1,4 @@
+import 'whatwg-fetch'; // polyfill Fetch
 import Polyfill from "./modules/Polyfill"; // polyfill forEach
 import FetchAPI from "./modules/FetchAPI";
 import CarModifications from "./modules/CarModifications"

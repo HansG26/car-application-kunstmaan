@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -92,65 +92,35 @@ module.exports = g;
 
 /***/ }),
 /* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/**
- * @this {Promise}
- */
-function finallyConstructor(callback) {
-  var constructor = this.constructor;
-  return this.then(
-    function(value) {
-      return constructor.resolve(callback()).then(function() {
-        return value;
-      });
-    },
-    function(reason) {
-      return constructor.resolve(callback()).then(function() {
-        return constructor.reject(reason);
-      });
-    }
-  );
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (finallyConstructor);
-
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(3);
+__webpack_require__(2);
 
-__webpack_require__(4);
-
-var _Polyfill = __webpack_require__(9);
+var _Polyfill = __webpack_require__(3);
 
 var _Polyfill2 = _interopRequireDefault(_Polyfill);
 
-var _FetchAPI = __webpack_require__(10);
+var _FetchAPI = __webpack_require__(9);
 
 var _FetchAPI2 = _interopRequireDefault(_FetchAPI);
 
-var _CarModifications = __webpack_require__(11);
+var _CarModifications = __webpack_require__(10);
 
 var _CarModifications2 = _interopRequireDefault(_CarModifications);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // polyfill forEach
-// polyfill fetch
-var polyFill = new _Polyfill2.default(); // polyfill promise
+var polyFill = new _Polyfill2.default(); // polyfill Fetch
 
 var fetchAPI = new _FetchAPI2.default();
 var carModifications = new _CarModifications2.default();
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -679,47 +649,46 @@ if (!self.fetch) {
 
 
 /***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _promisePolyfill = __webpack_require__(4);
+
+var _promisePolyfill2 = _interopRequireDefault(_promisePolyfill);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// polyfill Promise
+
+var Polyfill = function Polyfill() {
+    _classCallCheck(this, Polyfill);
+
+    if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = Array.prototype.forEach;
+    }
+    if (!window.Promise) {
+        window.Promise = _promisePolyfill2.default;
+    }
+};
+
+exports.default = Polyfill;
+
+/***/ }),
 /* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__finally__ = __webpack_require__(1);
-
-
-
-/** @suppress {undefinedVars} */
-var globalNS = (function() {
-  // the only reliable means to get the global object is
-  // `Function('return this')()`
-  // However, this causes CSP violations in Chrome apps.
-  if (typeof self !== 'undefined') {
-    return self;
-  }
-  if (typeof window !== 'undefined') {
-    return window;
-  }
-  if (typeof global !== 'undefined') {
-    return global;
-  }
-  throw new Error('unable to locate global object');
-})();
-
-if (!('Promise' in globalNS)) {
-  globalNS['Promise'] = __WEBPACK_IMPORTED_MODULE_0__index__["a" /* default */];
-} else if (!globalNS.Promise.prototype['finally']) {
-  globalNS.Promise.prototype['finally'] = __WEBPACK_IMPORTED_MODULE_1__finally__["a" /* default */];
-}
-
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
-
-/***/ }),
-/* 5 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(setImmediate) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__finally__ = __webpack_require__(1);
+/* WEBPACK VAR INJECTION */(function(setImmediate) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__finally__ = __webpack_require__(8);
 
 
 // Store setTimeout reference so promise-polyfill will be unaffected by
@@ -959,12 +928,12 @@ Promise._unhandledRejectionFn = function _unhandledRejectionFn(err) {
   }
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (Promise);
+/* harmony default export */ __webpack_exports__["default"] = (Promise);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(6).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(5).setImmediate))
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
@@ -1020,7 +989,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(7);
+__webpack_require__(6);
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -1034,7 +1003,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -1224,10 +1193,10 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(7)))
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -1417,30 +1386,34 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Polyfill = function Polyfill() {
-    _classCallCheck(this, Polyfill);
-
-    if (window.NodeList && !NodeList.prototype.forEach) {
-        NodeList.prototype.forEach = Array.prototype.forEach;
+/**
+ * @this {Promise}
+ */
+function finallyConstructor(callback) {
+  var constructor = this.constructor;
+  return this.then(
+    function(value) {
+      return constructor.resolve(callback()).then(function() {
+        return value;
+      });
+    },
+    function(reason) {
+      return constructor.resolve(callback()).then(function() {
+        return constructor.reject(reason);
+      });
     }
-};
+  );
+}
 
-exports.default = Polyfill;
+/* harmony default export */ __webpack_exports__["a"] = (finallyConstructor);
+
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1493,7 +1466,7 @@ var FetchAPI = function () {
 exports.default = FetchAPI;
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1583,11 +1556,11 @@ var CarModifications = function () {
         key: "changeColorWindowGlass",
         value: function changeColorWindowGlass() {
             if (this.lightColorWindowsRadioButton.checked) {
-                this.leftWindow.style.backgroundColor = "#d0ecfdcc";
-                this.rightWindow.style.backgroundColor = "#d0ecfdcc";
+                this.leftWindow.style.backgroundColor = "#bbdff5";
+                this.rightWindow.style.backgroundColor = "#bbdff5";
             } else if (this.darkColorWindowsRadioButton.checked) {
-                this.leftWindow.style.backgroundColor = "#071524cc";
-                this.rightWindow.style.backgroundColor = "#071524cc";
+                this.leftWindow.style.backgroundColor = "#071524";
+                this.rightWindow.style.backgroundColor = "#071524";
             }
         }
     }, {
@@ -1627,8 +1600,8 @@ var CarModifications = function () {
             this.rims.forEach(function (rim) {
                 return rim.style.backgroundColor = "#555";
             });
-            this.leftWindow.style.backgroundColor = "#d0ecfdcc";
-            this.rightWindow.style.backgroundColor = "#d0ecfdcc";
+            this.leftWindow.style.backgroundColor = "#bbdff5";
+            this.rightWindow.style.backgroundColor = "#bbdff5";
             this.carNumber.classList.remove("car__body__number--invisible");
             this.carNumber.innerHTML = "12";
             this.carLogo.classList.add("car__logo--invisible");
