@@ -220,11 +220,13 @@ select { /* 1 */
 }.car-section {
     background-color: #87cefa;
     height: 40vh;
+    min-height: 240px;
     display: flex;
     align-items: center;
 }@media (min-width: 530px) {.car-section {
-        height: 55vh
-} 
+        height: 55vh; 
+        min-height: 360px
+}
     }.mod-section {
     background-color: #f5b791;
     height: 60vh;
@@ -368,8 +370,12 @@ select { /* 1 */
             top: -115%;
             box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 1);
             transition: all 0.3s ease-out;
+            
+            
         }@media (min-width: 530px) {.car__bottom__wheel {
                 border: 30px solid #222
+            
+            
         }
             }.mod-menu {
     width: 85%;

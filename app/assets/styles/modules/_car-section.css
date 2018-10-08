@@ -1,10 +1,12 @@
 .car-section {
     background-color: $skyBlue;
     height: 40vh;
+    min-height: 240px;
     display: flex;
     align-items: center;
 
     @media (min-width: 530px) {
         height: 55vh; 
+        min-height: 360px;
     }
-}
+}c
