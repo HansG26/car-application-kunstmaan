@@ -225,7 +225,7 @@ select { /* 1 */
     align-items: center;
 }@media (min-width: 530px) {.car-section {
         height: 55vh; 
-        min-height: 360px
+        min-height: 330px
 }
     }.mod-section {
     background-color: #f5b791;
@@ -434,11 +434,11 @@ select { /* 1 */
         
     }
         }.mod-menu__reset {
-        margin-top: 20px;
+        margin-top: 15px;
         background-color: #F5919D;
         border: none;
         padding: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         border-radius: 10px;
         margin-left: auto;
         margin-right: auto;
@@ -447,7 +447,7 @@ select { /* 1 */
         cursor: pointer;
         
     }@media (min-width: 530px) {.mod-menu__reset {
-            margin: 40px 0 0 0;
+            margin: 30px 0 15px 0;
             display: inline
         
     }

@@ -58,11 +58,11 @@
     }
 
     &__reset {
-        margin-top: 20px;
+        margin-top: 15px;
         background-color: #F5919D;
         border: none;
         padding: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         border-radius: 10px;
         margin-left: auto;
         margin-right: auto;
@@ -71,7 +71,7 @@
         cursor: pointer;
 
         @media (min-width: 530px) {
-            margin: 40px 0 0 0;
+            margin: 30px 0 15px 0;
             display: inline;
         }
         
